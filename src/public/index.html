@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicons/icon-180.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicons/icon-32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicons/icon-16.png" />
+  <link rel="manifest" href="/assets/manifest.json" />
+  <meta name="application-name" content="Favicon generator" />
+  <meta name="theme-color" content="#ff0000">
+  <title>Favicon generator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+  <style>
+    h1 {
+      background: url('assets/favicons/icon-48.png') no-repeat 0 5px;
+      padding-left: 70px;
+    }
+
+    pre {
+      padding: .2rem .5rem;
+      margin: 0 .2rem;
+      font-size: 90%;
+      background: #F1F1F1;
+      border: 1px solid #E1E1E1;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Favicon generator</h1>
+    <form method="post" action="/icon">
+      <div class="row">
+        <div class="six columns">
+          <label>Text:</label>
+          <input class="u-full-width" type="text" name="textContent" value="f.g." required />
+        </div>
+        <div class="six columns">
+          <label>Font size percentage:</label>
+          <input class="u-full-width" name="fontSizePercentage" type="number" value="0.5" step="0.1" min="0" required />
+        </div>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <label>Background color:</label>
+          <input type="color" name="backgroundColor" value="#ff0000" required />
+        </div>
+        <div class="six columns">
+          <label>Font color:</label>
+          <input type="color" name="fontColor" value="#ffffff" required />
+        </div>
+      </div>
+      <div class="row">
+        <div class="six columns">
+          <label>Rounded corners percentage:</label>
+          <input class="u-full-width" name="roundedCornersPercentage" type="number" value="0.125" step="0.001" min="0" required />
+        </div>
+      </div>
+
+      <button type="submit" class="button-primary">
+        Submit
+      </button>
+    </form>
+    <div id="icons"></div>
+    <div id="manifest"></div>
+    <div id="meta"></div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+dist
+node_modules
+*.orig
+yarn-error.log
+src/public/icons
+.env
